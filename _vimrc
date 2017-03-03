@@ -20,4 +20,3 @@ call plug#end() " Initialize plugin system
 let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
 let g:NERDAltDelims_C= 1 " alternate style for C comments 
 let g:NERDCompactSexyComs = 1 " makes block comments compact
-map \co  <plug>NERDComInsertComment
