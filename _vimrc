@@ -25,6 +25,7 @@ let g:NERDCompactSexyComs = 1 " makes block comments compact
 " remap append comment to ca and alt delims to cA
 map <leader>ca <plug>NERDCommenterAppend
 map <leader>cA <plug>NERDCommenterAltDelims 
+imap <C-q> <plug>NERDCommenterInsert
 
 " enables backup
 set backup 
