@@ -1,11 +1,15 @@
 " Misc {{{
-set modelines=1
+set modelines=1 " allows specific settings for file
+set textwidth=79 "sets textwidth to 79 chars
 " }}}
 " UI{{{
 colorscheme elflord
 syntax on
 set ruler
 set number              " show line numbers
+" }}}
+" Movement{{{
+
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4       " number of visual spaces per TAB
@@ -66,6 +70,13 @@ set directory=~/vimfiles/tmp,.
 map <F2> :set paste<CR>i
 " Leave paste mode on exit  
 au InsertLeave * set nopaste  
+" }}}
+" Searching{{{
+set hlsearch
+set incsearch 
+
+" allows search highlight to be toggled
+nnoremap <F3> :set hlsearch!<CR>  
 " }}}
 
 set winaltkeys=menu
