@@ -3,8 +3,9 @@ set modelines=1 " allows specific settings for file
 set textwidth=79 "sets textwidth to 79 chars
 " }}}
 " UI{{{
-colorscheme elflord
-syntax on
+syntax enable
+set background=dark
+colorscheme solarized_new
 set ruler
 set number              " show line numbers
 " }}}
