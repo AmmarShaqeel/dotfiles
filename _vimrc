@@ -1,6 +1,7 @@
 " Misc {{{
 set modelines=1 " allows specific settings for file
 set textwidth=79 "sets textwidth to 79 chars
+inoremap ( ()<Esc>i
 " }}}
 " UI{{{
 syntax enable
