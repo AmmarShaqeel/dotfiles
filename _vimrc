@@ -10,7 +10,9 @@ set ruler
 set number              " show line numbers
 " }}}
 " Movement{{{
-
+" removes ex mode bind
+:nnoremap Q <Nop>
+:let mapleader = ","
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4       " number of visual spaces per TAB
@@ -57,7 +59,6 @@ let g:NERDCompactSexyComs = 1 " makes block comments compact
 " remap append comment to ca and alt delims to cA
 map <leader>ca <plug>NERDCommenterAppend
 map <leader>cA <plug>NERDCommenterAltDelims 
-imap <C-q> <plug>NERDCommenterInsert
 " }}}
 " Backups {{{
 " enables backup
@@ -82,9 +83,6 @@ set incsearch
 nnoremap <F3> :set hlsearch!<CR>  
 " }}}
 
-" removes ex mode bind
-:nnoremap Q <Nop>
-:let mapleader = ","
 
 set winaltkeys=menu
 autocmd GUIEnter * simalt ~x
