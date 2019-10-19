@@ -4,6 +4,7 @@ set textwidth=79 "sets textwidth to 79 chars
 " }}}
 " UI{{{
 syntax enable
+colorscheme solarized
 set background=dark
 set ruler
 set number              " show line numbers
@@ -16,6 +17,7 @@ set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4
 set expandtab       " tabs are spaces
+autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 " }}}
 " Folding {{{
 "=== folding ===
@@ -79,6 +81,10 @@ set incsearch
 " allows search highlight to be toggled
 nnoremap <F3> :set hlsearch!<CR>  
 " }}}
+
+" removes ex mode bind
+:nnoremap Q <Nop>
+:let mapleader = ","
 
 set winaltkeys=menu
 autocmd GUIEnter * simalt ~x
