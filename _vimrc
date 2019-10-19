@@ -5,7 +5,6 @@ set textwidth=79 "sets textwidth to 79 chars
 " UI{{{
 syntax enable
 set background=dark
-colorscheme solarized_new
 set ruler
 set number              " show line numbers
 " }}}
@@ -33,6 +32,7 @@ call plug#begin('~/vimfiles/plugged') " directory for vim plugins
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'godlygeek/tabular'
 
 call plug#end() " Initialize plugin system
 " }}}
