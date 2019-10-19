@@ -83,7 +83,7 @@ nnoremap <F3> :set hlsearch!<CR>
 
 " removes ex mode bind
 :nnoremap Q <Nop>
-:let mapleader = "<space>"
+:let mapleader = ","
 
 set winaltkeys=menu
 autocmd GUIEnter * simalt ~x
