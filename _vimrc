@@ -1,6 +1,7 @@
 " Misc {{{
 set modelines=1 " allows specific settings for file
-set textwidth=79 "sets textwidth to 79 chars
+set textwidth=79 " sets textwidth to 79 chars
+set iskeyword-=_ " sets _ to a keyword
 " }}}
 " UI{{{
 syntax enable
@@ -59,6 +60,7 @@ let g:NERDCompactSexyComs = 1 " makes block comments compact
 " remap append comment to ca and alt delims to cA
 map <leader>ca <plug>NERDCommenterAppend
 map <leader>cA <plug>NERDCommenterAltDelims 
+imap <F2> <plug>NERDCommenterInsert
 " }}}
 " Backups {{{
 " enables backup
@@ -71,7 +73,7 @@ set directory=~/vimfiles/tmp,.
 " }}}
 " Pasting {{{
 "key to insert mode with paste using F2 key  
-map <F2> :set paste<CR>i
+map <F4> :set paste<CR>i
 " Leave paste mode on exit  
 au InsertLeave * set nopaste  
 " }}}
