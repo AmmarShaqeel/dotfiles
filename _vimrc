@@ -1,7 +1,6 @@
 " Misc {{{
 set modelines=1 " allows specific settings for file
 set textwidth=79 " sets textwidth to 79 chars
-set iskeyword-=_ " sets _ to a keyword
 " }}}
 " UI{{{
 syntax enable
