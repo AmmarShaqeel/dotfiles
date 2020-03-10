@@ -5,9 +5,10 @@ set textwidth=79 "sets textwidth to 79 chars
 " UI{{{
 syntax enable
 colorscheme solarized
-set background=dark
+set background=light
 set ruler
-set number              " show line numbers
+set rnu              " show relative line numbers
+set guifont=Consolas:h11:cANSI
 " }}}
 " Movement{{{
 
@@ -24,7 +25,6 @@ autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 set foldmethod=indent   " fold based on indent level
 set foldnestmax=10      " max 10 depth
 set foldenable          " don't fold files by default on open
-nnoremap <space> za
 set foldlevelstart=10    " start with fold level of 1
 " }}}
 " Plugins {{{
@@ -49,16 +49,7 @@ let g:ctrlp_switch_buffer = 0 " open files in new buffer
 let g:ctrlp_working_path_mode = 0 " allow change in working path
 let g:ctrlp_user_command = 'ag %s -l -g ""' " tells ctrp to use ag
 "}}}
-" NERDcommenter {{{
-let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
-let g:NERDAltDelims_C= 1 " alternate style for C comments 
-let g:NERDCompactSexyComs = 1 " makes block comments compact
 
-" remap append comment to ca and alt delims to cA
-map <leader>ca <plug>NERDCommenterAppend
-map <leader>cA <plug>NERDCommenterAltDelims 
-imap <C-q> <plug>NERDCommenterInsert
-" }}}
 " Backups {{{
 " enables backup
 set backup 
@@ -83,8 +74,27 @@ nnoremap <F3> :set hlsearch!<CR>
 " }}}
 
 " removes ex mode bind
-:nnoremap Q <Nop>
-:let mapleader = ","
+nnoremap <Space> <Nop>
+nnoremap Q <Nop>
+nnoremap <Bslash> za
+let mapleader = "\<Space>"
+
+" NERDcommenter {{{
+" remap append comment to ca and alt delims to cA
+map <leader>ca <plug>NERDCommenterAppend
+map <leader>cA <plug>NERDCommenterAltDelims 
+imap <C-q> <plug>NERDCommenterInsert
+map <leader>cc <plug>NERDCommenterToggle
+
+let g:NERDCreateDefaultMappings = 0
+let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
+let g:NERDAltDelims_C= 1 " alternate style for C comments 
+let g:NERDCompactSexyComs = 1 " makes block comments compact
+
+
+" }}}
+
+
 
 set winaltkeys=menu
 autocmd GUIEnter * simalt ~x
