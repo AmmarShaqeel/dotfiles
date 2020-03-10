@@ -1,6 +1,6 @@
 " Misc {{{
 set modelines=1 " allows specific settings for file
-set textwidth=79 "sets textwidth to 79 chars
+set textwidth=79 " sets textwidth to 79 chars
 " }}}
 " UI{{{
 syntax enable
@@ -10,8 +10,11 @@ set ruler
 set rnu              " show relative line numbers
 set guifont=Consolas:h11:cANSI
 " }}}
-" Movement{{{
-
+" Binds{{{
+nnoremap <Space> <Nop>
+nnoremap Q <Nop>
+nnoremap <Bslash> za
+let mapleader = "\<Space>"
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4       " number of visual spaces per TAB
@@ -49,7 +52,6 @@ let g:ctrlp_switch_buffer = 0 " open files in new buffer
 let g:ctrlp_working_path_mode = 0 " allow change in working path
 let g:ctrlp_user_command = 'ag %s -l -g ""' " tells ctrp to use ag
 "}}}
-
 " Backups {{{
 " enables backup
 set backup 
@@ -61,7 +63,7 @@ set directory=~/vimfiles/tmp,.
 " }}}
 " Pasting {{{
 "key to insert mode with paste using F2 key  
-map <F2> :set paste<CR>i
+map <F4> :set paste<CR>i
 " Leave paste mode on exit  
 au InsertLeave * set nopaste  
 " }}}
@@ -72,13 +74,6 @@ set incsearch
 " allows search highlight to be toggled
 nnoremap <F3> :set hlsearch!<CR>  
 " }}}
-
-" removes ex mode bind
-nnoremap <Space> <Nop>
-nnoremap Q <Nop>
-nnoremap <Bslash> za
-let mapleader = "\<Space>"
-
 " NERDcommenter {{{
 " remap append comment to ca and alt delims to cA
 map <leader>ca <plug>NERDCommenterAppend
@@ -93,8 +88,6 @@ let g:NERDCompactSexyComs = 1 " makes block comments compact
 
 
 " }}}
-
-
 
 set winaltkeys=menu
 autocmd GUIEnter * simalt ~x
