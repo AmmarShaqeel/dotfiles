@@ -18,6 +18,7 @@ let mapleader = "\<Space>"
 " }}}
 " Spaces & Tabs {{{
 filetype plugin indent on
+set autoindent
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4
@@ -63,11 +64,9 @@ set backupskip=~/vimfiles/tmp,.
 set directory=~/vimfiles/tmp,.
 " }}}
 " Pasting {{{
-"key to insert mode with paste using F2 key  
-map <F4> :set paste<CR>i
-" Leave paste mode on exit  
-au InsertLeave * set nopaste  
-" }}}
+"use system clipboard
+set clipboard=unnamed
+"}}}
 " Searching{{{
 set hlsearch
 set incsearch 
