@@ -36,9 +36,10 @@ set foldlevelstart=10    " start with fold level of 1
 "=== plugins ===
 call plug#begin('~/vimfiles/plugged') " directory for vim plugins 
 
-Plug 'mileszs/ack.vim'
+Plug 'lervag/vimtex' 
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mileszs/ack.vim'
 Plug 'godlygeek/tabular'
 
 call plug#end() " Initialize plugin system
