@@ -12,8 +12,8 @@ set guifont=Consolas:h11:cANSI
 " }}}
 " Binds{{{
 nnoremap <Space> <Nop>
-nnoremap Q <Nop>
-nnoremap <Bslash> za
+nnoremap Q <Nop> 
+nnoremap <Bslash> za 
 let mapleader = "\<Space>"
 " }}}
 " Spaces & Tabs {{{
@@ -85,11 +85,12 @@ let g:NERDCreateDefaultMappings = 0
 let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
 let g:NERDAltDelims_C= 1 " alternate style for C comments 
 let g:NERDCompactSexyComs = 1 " makes block comments compact
-
-
 " }}}
 
+
 set winaltkeys=menu
-autocmd GUIEnter * simalt ~x
-  
+set guioptions -=m " removes menu bar gvim
+set guioptions -=T " removes toolbar gvim
+autocmd GUIEnter * simalt ~x " starts gvim maximised
+
 " vim:foldmethod=marker:foldlevel=0
