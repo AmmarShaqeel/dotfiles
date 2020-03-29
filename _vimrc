@@ -92,6 +92,6 @@ let g:NERDCompactSexyComs = 1 " makes block comments compact
 set winaltkeys=menu
 set guioptions -=m " removes menu bar gvim
 set guioptions -=T " removes toolbar gvim
-autocmd GUIEnter * simalt ~x " starts gvim maximised
 
+" autocmd GUIEnter * simalt ~x " starts gvim maximised
 " vim:foldmethod=marker:foldlevel=0
