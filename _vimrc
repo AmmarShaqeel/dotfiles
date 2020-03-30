@@ -94,7 +94,7 @@ set hlsearch  " highlight searched word
 set incsearch  " search while typing
 
 " allows search highlight to be toggled (prefered over nohlsearch as this can
-" be toggeled
+" be toggled
 nnoremap <F3> :set hlsearch!<CR>
 " }}}
 " NERDcommenter {{{
