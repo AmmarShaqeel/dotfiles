@@ -3,10 +3,10 @@
 set modelines=1 " allows specific settings for file (vim will check last line)
 set textwidth=79 " sets textwidth to 79 chars
 set backspace=2 " make backspace work like most other programs
+set encoding=utf-8
 
 " }}}
 " UI{{{
-
 colorscheme solarized 
 set background=light  
 syntax enable " enable syntax highlighting
@@ -55,6 +55,9 @@ set foldlevelstart=10    " start with fold level of 1
 "=== plugins ===
 call plug#begin('~/vimfiles/plugged') " directory for vim plugins 
 
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'lervag/vimtex' 
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -75,6 +78,35 @@ let g:ctrlp_switch_buffer = 0 " open files in new buffer
 let g:ctrlp_working_path_mode = 0 " allow change in working path
 let g:ctrlp_user_command = 'ag %s -l -g ""' " tells ctrp to use ag
 "}}}
+" UltiSnips/YouCompleteMe {{{
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" disable ycm tab usage
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+"}}}
+" NERDcommenter {{{
+
+" remap append comment to ca and alt delims to cA
+map <leader>ca <plug>NERDCommenterAppend
+map <leader>cA <plug>NERDCommenterAltDelims
+
+" maps ctrl + q to insert comment (in insert mode)
+imap <C-q> <plug>NERDCommenterInsert
+
+" remaps cc to toggle comment
+map <leader>cc <plug>NERDCommenterToggle
+
+let g:NERDCreateDefaultMappings = 0 " disables default mappings
+let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
+let g:NERDAltDelims_C= 1 " alternate style for C comments 
+let g:NERDCompactSexyComs = 1 " makes block comments compact
+
+" }}}
 " Backups {{{
 " enables backup
 set backup 
@@ -97,24 +129,6 @@ set incsearch  " search while typing
 " allows search highlight to be toggled (prefered over nohlsearch as this can
 " be toggled
 nnoremap <F3> :set hlsearch!<CR>
-" }}}
-" NERDcommenter {{{
-
-" remap append comment to ca and alt delims to cA
-map <leader>ca <plug>NERDCommenterAppend
-map <leader>cA <plug>NERDCommenterAltDelims
-
-" maps ctrl + q to insert comment (in insert mode)
-imap <C-q> <plug>NERDCommenterInsert
-
-" remaps cc to toggle comment
-map <leader>cc <plug>NERDCommenterToggle
-
-let g:NERDCreateDefaultMappings = 0 " disables default mappings
-let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
-let g:NERDAltDelims_C= 1 " alternate style for C comments 
-let g:NERDCompactSexyComs = 1 " makes block comments compact
-
 " }}}
 " GVIM/Windows {{{
 set winaltkeys=menu " enables alt + menu commands
