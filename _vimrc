@@ -1,30 +1,49 @@
 " Misc {{{
+
 set modelines=1 " allows specific settings for file
 set textwidth=79 " sets textwidth to 79 chars
 set backspace=2 " make backspace work like most other programs
+
 " }}}
 " UI{{{
+
 syntax enable
 colorscheme solarized
 set background=light
-set ruler
-set rnu              " show relative line numbers
-set guifont=Consolas:h11:cANSI
+set ruler           " show numbers
+set rnu             " show relative line numbers
+set guifont=Consolas:h11:cANSI  " set font to consolas
+
 " }}}
 " Binds{{{
+
+" stops space from moving cursor when in visual mode
 nnoremap <Space> <Nop>
-nnoremap Q <Nop> 
-nnoremap <Bslash> za 
-let mapleader = "\<Space>"
+
+" disable ex-mode for now...
+nnoremap Q <Nop>
+
+" space controls folds
+nnoremap <Space> za
+
+" maps leader to comma
+let mapleader = ","
+
 " }}}
 " Spaces & Tabs {{{
-filetype plugin indent on
-set autoindent
-set tabstop=4       " number of visual spaces per TAB
+
+set expandtab       " tabs are spaces
+set tabstop=4       " number of spaces vim shows when it sees a tab
 set softtabstop=4   " number of spaces in tab when editing
 set shiftwidth=4
-set expandtab       " tabs are spaces
+
+" }}}
+" Indentation {{{
+
+filetype plugin indent on
+set autoindent
 autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
+
 " }}}
 " Folding {{{
 "=== folding ===
@@ -74,7 +93,7 @@ set hlsearch
 set incsearch 
 
 " allows search highlight to be toggled
-nnoremap <F3> :set hlsearch!<CR>  
+nnoremap <F3> :set hlsearch!<CR>
 " }}}
 " NERDcommenter {{{
 " remap append comment to ca and alt delims to cA
