@@ -13,6 +13,7 @@ syntax enable " enable syntax highlighting
 set ruler           " show numbers
 set rnu             " show relative line numbers
 set guifont=Consolas:h11:cANSI  " set font to consolas
+set lazyredraw " Make things faster
 
 " }}}
 " Binds{{{
@@ -124,5 +125,5 @@ set guioptions -=T " removes toolbar gvim
 
 " }}}
 
-"vim modeline sets foldmethod to marker and folds everything
+" modeline sets foldmethod to marker and folds everything
 " vim:foldmethod=marker:foldlevel=0
