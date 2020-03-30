@@ -98,6 +98,7 @@ nnoremap <F3> :set hlsearch!<CR>
 " NERDcommenter {{{
 " remap append comment to ca and alt delims to cA
 map <leader>ca <plug>NERDCommenterAppend
+map <leader>cA <plug>NERDCommenterAltDelims
 imap <C-q> <plug>NERDCommenterInsert
 map <leader>cc <plug>NERDCommenterToggle
 
