@@ -40,8 +40,13 @@ set shiftwidth=4
 
 filetype plugin indent on
 set autoindent
-autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 
+autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
+" }}}
+" Latex {{{
+let g:tex_flavor="latex"
+" Skeleton files
+autocmd! BufNewFile * silent! 0r ~/vimfiles/skeleton/template.%:e
 " }}}
 " Folding {{{
 
