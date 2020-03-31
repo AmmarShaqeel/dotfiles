@@ -31,3 +31,7 @@ file:
 
     mklink /H "C:\users\ammar_laptop\_vimrc" ".\_vimrc"
 
+
+## Powershell
+Just some aliases and a colour theme.   
+
