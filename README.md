@@ -1,21 +1,21 @@
-# vim
+## vim
 
 My vimrc. 
 
 A lot was borrowed from "A Good Vimrc" by Doug Black.
 
 
-## Setup
+### Setup
 clone git repo
 symlink vimrc to \_vimrc
 symlink vimfiles\ftplugin to .\ftplugin
 symlink vimfiles\indent to .\indent
 
 
-### linux symlink
+#### linux symlink
 ln -s vim/_vimrc .vimrc
 
-### windows symlinx
+#### windows symlinx
 directory: 
 
     mklink /J "C:\users\ammar_laptop\vimfiles\ftplugin" ".\ftplugin"
