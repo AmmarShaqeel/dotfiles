@@ -1,5 +1,5 @@
 Set-PSReadlineOption -BellStyle None
-set-alias np "C:\Program Files (x86)\Notepad++\notepad++.exe"
+set-alias np "gvim.exe"
 
 <# function vim([string] $arg1) 
 {
@@ -10,9 +10,11 @@ set-alias np "C:\Program Files (x86)\Notepad++\notepad++.exe"
 } #>
 
 function home {cd "C:\Users\ammar_laptop\"}
+function dotfiles {cd "C:\Users\ammar_laptop\scripts\dotfiles"}
 function scripts {cd "C:\Users\ammar_laptop\scripts\"}
 function journal {cd "C:\Users\ammar_laptop\Google Drive\journals"}
-function fpga {cd "N:\FPGA\"}
+function thesis {cd "D:\OneDrive - University College London\Project\thesis"}
+function report {cd "C:\Users\ammar_laptop\Documents\SNS"}
 function sns {
 conda activate sns
 cd "C:\Users\ammar_laptop\scripts\sns\" 
