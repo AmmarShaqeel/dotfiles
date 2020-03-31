@@ -1,3 +1,6 @@
+# dotfiles
+General config files
+
 ## vim
 
 My vimrc. 
@@ -13,7 +16,9 @@ symlink vimfiles\indent to .\indent
 
 
 #### linux symlink
-ln -s vim/_vimrc .vimrc
+
+    ln -s vim/_vimrc .vimrc
+
 
 #### windows symlinx
 directory: 
