@@ -18,6 +18,7 @@ ln -s vim/_vimrc .vimrc
 ### windows symlinx
 directory: 
     mklink /J "C:\users\ammar_laptop\vimfiles\ftplugin" ".\ftplugin"
+
     mklink /J "C:\users\ammar_laptop\vimfiles\indent" ".\indent"
 
 file: 
