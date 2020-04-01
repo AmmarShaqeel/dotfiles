@@ -26,7 +26,7 @@ nnoremap Q <Nop>
 nnoremap <Space> za
 " maps leader to comma
 let mapleader = ","
-
+let maplocalleader = ","
 " }}}
 " Spaces & Tabs {{{
 
@@ -67,10 +67,65 @@ Plug 'lervag/vimtex'
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
-Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
 
 call plug#end() " Initialize plugin system
 " }}}
+" Plugin Settings {{{
+
+" Easy Align Binds
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
+" Ultisnips binds
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" disable ycm tab usage
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
+
+" NERDcommenter 
+" remap append comment to ca and alt delims to cA
+map <leader>ca <plug>NERDCommenterAppend
+map <leader>cA <plug>NERDCommenterAltDelims
+
+" maps ctrl + q to insert comment (in insert mode)
+imap <C-'> <plug>NERDCommenterInsert
+
+" remaps cc to toggle comment
+map <leader>cc <plug>NERDCommenterToggle
+
+let g:NERDCreateDefaultMappings = 0 " disables default mappings
+let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
+let g:NERDAltDelims_C= 1 " alternate style for C comments 
+let g:NERDCompactSexyComs = 1 " makes block comments compact
+
+" Vimtex
+let g:vimtex_fold_enabled = 1
+let g:vimtex_compiler_latexmk = {
+    \ 'backend' : 'jobs',
+    \ 'background' : 1,
+    \ 'build_dir' : '',
+    \ 'callback' : 1,
+    \ 'continuous' : 1,
+    \ 'executable' : 'latexmk',
+    \ 'options' : [
+    \   '-shell-escape',
+    \   '-verbose',
+    \   '-file-line-error',
+    \   '-synctex=1',
+    \   '-interaction=nonstopmode',
+    \ ],
+    \}
+let g:vimtex_view_general_viewer = 'SumatraPDF'
+let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line @pdf'
+let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+"}}}
 " Ctrl-P {{{
 
 " enables the silver searcher
@@ -83,35 +138,6 @@ let g:ctrlp_switch_buffer = 0 " open files in new buffer
 let g:ctrlp_working_path_mode = 0 " allow change in working path
 let g:ctrlp_user_command = 'ag %s -l -g ""' " tells ctrp to use ag
 "}}}
-" UltiSnips/YouCompleteMe {{{
-
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
-" disable ycm tab usage
-let g:ycm_key_list_select_completion=[]
-let g:ycm_key_list_previous_completion=[]
-
-"}}}
-" NERDcommenter {{{
-
-" remap append comment to ca and alt delims to cA
-map <leader>ca <plug>NERDCommenterAppend
-map <leader>cA <plug>NERDCommenterAltDelims
-
-" maps ctrl + q to insert comment (in insert mode)
-imap <C-q> <plug>NERDCommenterInsert
-
-" remaps cc to toggle comment
-map <leader>cc <plug>NERDCommenterToggle
-
-let g:NERDCreateDefaultMappings = 0 " disables default mappings
-let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
-let g:NERDAltDelims_C= 1 " alternate style for C comments 
-let g:NERDCompactSexyComs = 1 " makes block comments compact
-
-" }}}
 " Backups {{{
 " enables backup
 set backup 
