@@ -3,3 +3,5 @@
 !/vim/ftplugin/
 !/vim/indent/
 !/vim/colors/
+!/vim/autoload/
+/vim/autoload/plug.vim
