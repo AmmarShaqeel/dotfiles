@@ -37,14 +37,14 @@ set shiftwidth=4
 
 " }}}
 " Indentation {{{
-
 filetype plugin indent on
 set autoindent
 
-autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 " }}}
-" Latex {{{
+" Files {{{
 let g:tex_flavor="latex"
+
+autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 " Skeleton files
 autocmd! BufNewFile * silent! 0r ~/vimfiles/skeleton/template.%:e
 " }}}
@@ -71,16 +71,15 @@ Plug 'junegunn/vim-easy-align'
 
 call plug#end() " Initialize plugin system
 " }}}
-" Plugin Settings {{{
-
-" Easy Align Binds
+" Easy Align {{{
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" Ultisnips binds
+"}}}
+" Ultisnips {{{
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
@@ -89,7 +88,8 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:ycm_key_list_select_completion=[]
 let g:ycm_key_list_previous_completion=[]
 
-" NERDcommenter 
+"}}}
+" NERDcommenter {{{
 " remap append comment to ca and alt delims to cA
 map <leader>ca <plug>NERDCommenterAppend
 map <leader>cA <plug>NERDCommenterAltDelims
@@ -105,7 +105,8 @@ let g:NERDSpaceDelims = 1 " adds space after comments in NERDcommenter
 let g:NERDAltDelims_C= 1 " alternate style for C comments 
 let g:NERDCompactSexyComs = 1 " makes block comments compact
 
-" Vimtex
+"}}}
+" Vimtex {{{
 let g:vimtex_fold_enabled = 1
 let g:vimtex_compiler_latexmk = {
     \ 'backend' : 'jobs',
@@ -127,7 +128,6 @@ let g:vimtex_view_general_options = '-reuse-instance -forward-search @tex @line 
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 "}}}
 " Ctrl-P {{{
-
 " enables the silver searcher
 if executable('ag')
       let g:ackprg = 'ag --vimgrep'
@@ -162,11 +162,11 @@ set incsearch  " search while typing
 nnoremap <F3> :set hlsearch!<CR>
 " }}}
 " GVIM/Windows {{{
-set winaltkeys=menu " enables alt + menu commands
 set guioptions -=m " removes menu bar gvim
 set guioptions -=T " removes toolbar gvim
 
 " autocmd GUIEnter * simalt ~x " starts gvim maximised (use maximise.dll instead) 
+" set winaltkeys=menu " enables alt + menu commands
 
 " }}}
 
