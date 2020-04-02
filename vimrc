@@ -95,7 +95,7 @@ map <leader>ca <plug>NERDCommenterAppend
 map <leader>cA <plug>NERDCommenterAltDelims
 
 " maps ctrl + q to insert comment (in insert mode)
-imap <C-'> <plug>NERDCommenterInsert
+imap <C-q> <plug>NERDCommenterInsert
 
 " remaps cc to toggle comment
 map <leader>cc <plug>NERDCommenterToggle
@@ -110,7 +110,7 @@ let g:vimtex_fold_enabled = 1
 let g:vimtex_compiler_latexmk = {
     \ 'backend' : 'jobs',
     \ 'background' : 1,
-    \ 'build_dir' : '',
+    \ 'build_dir' : './build',
     \ 'callback' : 1,
     \ 'continuous' : 1,
     \ 'executable' : 'latexmk',
