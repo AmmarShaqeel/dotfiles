@@ -55,6 +55,7 @@ set foldnestmax=10      " max 10 depth
 set foldenable          " don't fold files by default on open
 set foldlevelstart=10    " start with fold level of 1
 
+autocmd FileType tex setlocal foldlevel=0
 " }}}
 " Plugins {{{
 "=== plugins ===
