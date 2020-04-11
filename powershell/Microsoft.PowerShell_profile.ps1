@@ -12,8 +12,8 @@ set-alias np "gvim.exe"
 function home {cd "C:\Users\ammar_laptop\"}
 function dotfiles {cd "C:\Users\ammar_laptop\scripts\dotfiles"}
 function scripts {cd "C:\Users\ammar_laptop\scripts\"}
-function journals {cd "C:\Users\ammar_laptop\Google Drive\journals"}
-function logs {cd "C:\Users\ammar_laptop\Google Drive\logs"}
+function journal {cd "C:\Users\ammar_laptop\Google Drive\journals"}
+function log {cd "C:\Users\ammar_laptop\Google Drive\logs"}
 function thesis {cd "D:\OneDrive - University College London\Project\thesis"}
 function report {cd "C:\Users\ammar_laptop\Documents\SNS"}
 function sns {
