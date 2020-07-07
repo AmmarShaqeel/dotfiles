@@ -11,7 +11,8 @@ colorscheme solarized
 set background=light  
 syntax enable " enable syntax highlighting
 set ruler           " show numbers
-set rnu             " show relative line numbers
+set number
+set nornu             " show no relative line numbers
 set guifont=Consolas:h11:cANSI  " set font to consolas
 set lazyredraw " Make things faster
 
