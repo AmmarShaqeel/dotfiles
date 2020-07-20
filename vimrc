@@ -7,8 +7,8 @@ set encoding=utf-8
 
 " }}}
 " UI{{{
-colorscheme solarized 
-set background=light  
+"colorscheme solarized 
+"set background=dark  
 syntax enable " enable syntax highlighting
 set ruler           " show numbers
 set number
@@ -62,6 +62,7 @@ autocmd FileType tex setlocal foldlevel=0
 "=== plugins ===
 call plug#begin('~/vimfiles/plugged') " directory for vim plugins 
 
+Plug 'altercation/vim-colors-solarized'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ycm-core/YouCompleteMe'
@@ -164,8 +165,8 @@ set incsearch  " search while typing
 nnoremap <F3> :set hlsearch!<CR>
 " }}}
 " GVIM/Windows {{{
-set guioptions -=m " removes menu bar gvim
-set guioptions -=T " removes toolbar gvim
+" set guioptions -=m " removes menu bar gvim
+" set guioptions -=T " removes toolbar gvim
 
 " autocmd GUIEnter * simalt ~x " starts gvim maximised (use maximise.dll instead) 
 " set winaltkeys=menu " enables alt + menu commands

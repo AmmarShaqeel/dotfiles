@@ -1,0 +1,16 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+
+alias journal='cd ~/gdrive/journals'
+alias log='cd ~/gdrive/logs'
+
+function daily {
+	cd ~/gdrive/journals/daily  && konsole -e vim "$(date +%F).md" &
+}
