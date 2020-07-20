@@ -17,7 +17,8 @@ symlink vimfiles\indent to .\indent
 
 #### linux symlink
 
-    ln -s vim/_vimrc .vimrc
+    ln vimrc ~/.vimrc
+    ln bash/bashrc ~/.bashrc
 
 
 #### windows symlinx
