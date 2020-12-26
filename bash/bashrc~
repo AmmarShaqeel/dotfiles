@@ -8,9 +8,9 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-alias journal='cd ~/gdrive/journals'
-alias log='cd ~/gdrive/logs'
+alias journal='cd ~/Gdrive/journals'
+alias log='cd ~/Gdrive/logs'
 
 function daily {
-	cd ~/gdrive/journals/daily  && konsole -e vim "$(date +%F).md" &
+	cd ~/Gdrive/journals/daily  && konsole --fullscreen -e vim "$(date +%F).md" &
 }
