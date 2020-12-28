@@ -10,6 +10,7 @@ PS1='[\u@\h \W]\$ '
 
 alias journal='cd ~/Gdrive/journals'
 alias log='cd ~/Gdrive/logs'
+alias dotfiles='cd ~/scripts/dotfiles'
 
 function daily {
 	cd ~/Gdrive/journals/daily  && konsole --fullscreen -e vim "$(date +%F).md" &

@@ -71,7 +71,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'preservim/nerdtree'
 
 call plug#end() " Initialize plugin system
 " }}}
