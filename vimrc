@@ -7,8 +7,8 @@ set encoding=utf-8
 
 " }}}
 " UI{{{
-"colorscheme solarized 
-"set background=dark  
+set background=light  
+colorscheme solarized 
 syntax enable " enable syntax highlighting
 set ruler           " show numbers
 set number

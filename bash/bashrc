@@ -11,10 +11,14 @@ PS1='[\u@\h \W]\$ '
 alias journal='cd ~/Gdrive/journals'
 alias log='cd ~/Gdrive/logs'
 alias dotfiles='cd ~/scripts/dotfiles'
-alias abupload='rclone move /run/media/ammar/Data/upload/* rand:Audiobooks'
+alias abupload='rclone move /run/media/ammar/Data/upload/ rand:Audiobooks'
 
 function daily {
-	cd ~/Gdrive/journals/daily  && konsole --fullscreen -e vim "$(date +%F).md" &
+	cd ~/Gdrive/journals/daily  && konsole --hide-menubar --fullscreen -e vim "$(date +%F).md" &
+}
+
+function blog {
+	cd ~/website/hugo && konsole --hide-menubar --fullscreen -e vim &
 }
 
 # Install Ruby Gems to ~/gems
