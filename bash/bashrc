@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 alias journal='cd ~/Gdrive/journals'
 alias log='cd ~/Gdrive/logs'
 alias dotfiles='cd ~/scripts/dotfiles'
+alias log='cd ~/Gdrive/logs'
 alias abupload='rclone move /run/media/ammar/Data/upload/ onedrive-ucl:Audiobooks -v'
 
 function daily {
@@ -19,6 +20,10 @@ function daily {
 
 function blog {
 	cd ~/website/hugo && konsole --hide-menubar --fullscreen -e vim &
+}
+
+function website {
+	cd ~/website/ammarshaqeel.com/htdocs && konsole --hide-menubar --fullscreen -e vim &
 }
 
 # Install Ruby Gems to ~/gems
