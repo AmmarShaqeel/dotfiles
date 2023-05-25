@@ -23,7 +23,7 @@ function blog {
 }
 
 function website {
-	cd ~/website/ammarshaqeel.com/htdocs && konsole --hide-menubar --fullscreen -e vim &
+	cd ~/website/ammarshaqeel.com/htdocs
 }
 
 # Install Ruby Gems to ~/gems
