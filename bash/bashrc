@@ -15,7 +15,7 @@ alias log='cd ~/Gdrive/logs'
 alias abupload='rclone move /run/media/ammar/Data/upload/ onedrive-ucl:Audiobooks -v'
 alias website='cd ~/website/ammarshaqeel.com/htdocs'
 alias webcopy='rsync -avs  ammar@ammarshaqeel.com:/var/www/htdocs/ .'
-alias webpost='rsync -avs ~/website/ammarshaqeel.com/htdocs ammar@ammarshaqeel.com:/var/www/htdocs'
+alias webpost='rsync -avs ~/website/ammarshaqeel.com/htdocs/ ammar@ammarshaqeel.com:/var/www/htdocs'
 
 function daily {
 	cd ~/Gdrive/journals/daily  && konsole --hide-menubar --fullscreen -e vim "$(date +%F).md" &
