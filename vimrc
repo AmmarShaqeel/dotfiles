@@ -28,6 +28,8 @@ nnoremap <Space> za
 " maps leader to comma
 let mapleader = ","
 let maplocalleader = ","
+" open markdown files in chrome
+autocmd BufEnter *.md exe 'noremap <F5> :!start  C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p:S<CR>'
 " }}}
 " Spaces & Tabs {{{
 
@@ -44,6 +46,7 @@ set autoindent
 " }}}
 " Files {{{
 let g:tex_flavor="latex"
+let g:markdown_folding = 1
 
 autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 " Skeleton files
@@ -62,17 +65,18 @@ autocmd FileType tex setlocal foldlevel=0
 "=== plugins ===
 call plug#begin('~/vimfiles/plugged') " directory for vim plugins 
 
+Plug 'nathangrigg/vim-beancount'
 Plug 'altercation/vim-colors-solarized'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-Plug 'ycm-core/YouCompleteMe'
+"Plug 'ycm-core/YouCompleteMe'
 Plug 'lervag/vimtex' 
+Plug 'vimwiki/vimwiki' 
 Plug 'scrooloose/nerdcommenter'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'preservim/nerdtree'
-
 call plug#end() " Initialize plugin system
 " }}}
 " Easy Align {{{
@@ -84,9 +88,9 @@ nmap ga <Plug>(EasyAlign)
 
 "}}}
 " Ultisnips {{{
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<c-h>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " disable ycm tab usage
 let g:ycm_key_list_select_completion=[]
