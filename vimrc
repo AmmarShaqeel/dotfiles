@@ -18,7 +18,6 @@ set lazyredraw " Make things faster
 
 " }}}
 " Binds{{{
-
 " stops space from moving cursor when in visual mode
 nnoremap <Space> <Nop>
 " disable ex-mode for now...
@@ -28,6 +27,9 @@ nnoremap <Space> za
 " maps leader to comma
 let mapleader = ","
 let maplocalleader = ","
+"edit vimrc quickly
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 " open markdown files in chrome
 autocmd BufEnter *.md exe 'noremap <F5> :!start  C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p:S<CR>'
 " }}}
@@ -47,6 +49,9 @@ set autoindent
 " Files {{{
 let g:tex_flavor="latex"
 let g:markdown_folding = 1
+
+" setting beancount files to 2 spaces
+autocmd FileType beancount setlocal shiftwidth=2
 
 autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 " Skeleton files
@@ -69,7 +74,7 @@ Plug 'nathangrigg/vim-beancount'
 Plug 'altercation/vim-colors-solarized'
 Plug 'sirver/ultisnips'
 Plug 'honza/vim-snippets'
-"Plug 'ycm-core/YouCompleteMe'
+Plug 'ycm-core/YouCompleteMe'
 Plug 'lervag/vimtex' 
 Plug 'vimwiki/vimwiki' 
 Plug 'scrooloose/nerdcommenter'
