@@ -11,8 +11,17 @@ A lot was borrowed from "A Good Vimrc" by Doug Black.
 ### Setup
 clone git repo: `git clone https://github.com/AmmarShaqeel/dotfiles`
 
+Install vim-plug: https://github.com/junegunn/vim-plug
+
+Run `PlugInstall` then:
+
+Compile YCM: https://github.com/ycm-core/YouCompleteMe
+Install Solarized: `cd vimfiles/plugged/vim-colors-solarized/` and `mv solarized.vim ~/.vim/colors/`
+
 symlink vimrc to \_vimrc
+
 symlink vimfiles\ftplugin to .\ftplugin
+
 symlink vimfiles\indent to .\indent
 
 
