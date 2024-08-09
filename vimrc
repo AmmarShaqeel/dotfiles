@@ -29,7 +29,9 @@ let mapleader = ","
 let maplocalleader = ","
 "edit vimrc quickly
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
-nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
+nnoremap <leader>eb  :e ~/beancount/main.beancount <cr>
 " open markdown files in chrome
 autocmd BufEnter *.md exe 'noremap <F5> :!start  C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p:S<CR>'
 " }}}
@@ -59,7 +61,7 @@ autocmd! BufNewFile * silent! 0r ~/vimfiles/skeleton/template.%:e
 " }}}
 " Folding {{{
 
-set foldmethod=indent   " fold based on indent level
+set foldmethod=marker   " fold based on indent level
 set foldnestmax=10      " max 10 depth
 set foldenable          " don't fold files by default on open
 set foldlevelstart=10    " start with fold level of 1
