@@ -4,6 +4,7 @@ set modelines=1 " allows specific settings for file (vim will check last line)
 set textwidth=79 " sets textwidth to 79 chars
 set backspace=2 " make backspace work like most other programs
 set encoding=utf-8
+set showcmd
 
 " }}}
 " UI{{{
@@ -32,6 +33,10 @@ nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
 nnoremap <leader>eb  :e ~/beancount/main.beancount <cr>
+au FileType beancount nnoremap <buffer> <leader>g vip:GetContext<CR>
+au FileType beancount nnoremap <buffer> <leader>c vip:AlignCommodity<CR>
+autocmd FileType beancount inoremap <buffer> <Tab> <C-x><C-o>
+
 " open markdown files in chrome
 autocmd BufEnter *.md exe 'noremap <F5> :!start  C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p:S<CR>'
 " }}}
@@ -165,7 +170,11 @@ set directory=~/vimfiles/tmp,.
 " Pasting {{{
 
 "use system clipboard
-set clipboard=unnamed
+" set clipboard=unnamed
+
+if has('clipboard')
+    set clipboard=unnamedplus
+endif
 
 "}}}
 " Searching{{{
