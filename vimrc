@@ -13,6 +13,7 @@ colorscheme solarized
 syntax enable " enable syntax highlighting
 set ruler           " show numbers
 set number
+set showcmd
 set nornu             " show no relative line numbers
 set guifont=Consolas:h11:cANSI  " set font to consolas
 set lazyredraw " Make things faster
@@ -31,12 +32,16 @@ let maplocalleader = ","
 "edit vimrc quickly
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+<<<<<<< Updated upstream
 
 nnoremap <leader>eb  :e ~/beancount/main.beancount <cr>
 au FileType beancount nnoremap <buffer> <leader>g vip:GetContext<CR>
 au FileType beancount nnoremap <buffer> <leader>c vip:AlignCommodity<CR>
 autocmd FileType beancount inoremap <buffer> <Tab> <C-x><C-o>
 
+=======
+nnoremap <leader>eb :e ~/beancount/main.beancount<cr>
+>>>>>>> Stashed changes
 " open markdown files in chrome
 autocmd BufEnter *.md exe 'noremap <F5> :!start  C:\Program Files (x86)\Google\Chrome\Application\chrome.exe %:p:S<CR>'
 " }}}
@@ -59,6 +64,7 @@ let g:markdown_folding = 1
 
 " setting beancount files to 2 spaces
 autocmd FileType beancount setlocal shiftwidth=2
+autocmd FileType beancount inoremap <tab> <C-x><C-o>
 
 autocmd FileType c setlocal shiftwidth=2 softtabstop=2 expandtab
 " Skeleton files
@@ -66,12 +72,17 @@ autocmd! BufNewFile * silent! 0r ~/vimfiles/skeleton/template.%:e
 " }}}
 " Folding {{{
 
+<<<<<<< Updated upstream
 set foldmethod=marker   " fold based on indent level
-set foldnestmax=10      " max 10 depth
+=======
 set foldenable          " don't fold files by default on open
+set foldmethod=indent   " fold based on indent level
+>>>>>>> Stashed changes
+set foldnestmax=10      " max 10 depth
 set foldlevelstart=10    " start with fold level of 1
 
 autocmd FileType tex setlocal foldlevel=0
+autocmd FileType beancount setlocal foldmethod=syntax foldlevel=0
 " }}}
 " Plugins {{{
 "=== plugins ===
