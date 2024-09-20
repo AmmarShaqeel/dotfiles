@@ -17,6 +17,7 @@ alias website='cd ~/website'
 alias webcopy='rsync -avs  ammar@ammarshaqeel.com:/var/www/htdocs/ .'
 alias webpost='rsync -avs  ~/website/* ammar@ammarshaqeel.com:/var/www/htdocs/'
 alias beanprice='bean-price --v --update ~/beancount/main.beancount  | iconv -t utf-8 >>~/beancount/prices.beancount'
+alias moneytalk='source ~/envs/beancount/bin/activate && fava ~/beancount/main.beancount'
 
 
 function daily {
