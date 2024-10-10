@@ -44,11 +44,7 @@ directory:
 file: 
 
     mklink /H "C:\users\ammar_laptop\_vimrc" ".\_vimrc"
-
+README
 
 ## Powershell
 Just some aliases and a colour theme.   
-
-
-
-Just putting an example
